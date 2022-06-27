@@ -134,7 +134,7 @@ class Interface(object):
     ''' Class representing a Linux network device. '''
 
     def __init__(self, name):
-        self.name = name
+        self.name = name.encode('utf-8')
 
     def __repr__(self):
         return "<%s %s at 0x%x>" % (self.__class__.__name__, self.name, id(self))
